@@ -16,6 +16,7 @@ defmodule Wobby.Router do
   scope "/", Wobby do
     pipe_through :browser # Use the default browser stack
 
+    get "/about", AboutController, :about_us
     get "/", PageController, :index
   end
 
