@@ -16,8 +16,11 @@ defmodule Wobby.Router do
   scope "/", Wobby do
     pipe_through :browser # Use the default browser stack
 
+    get "/users",       UserController,  :index
+    get "/users/:id",   UserController,  :show
     get "/about/:name", AboutController, :about_us
-    get "/", PageController, :index
+    get "/",            PageController,  :index
+
   end
 
   # Other scopes may use custom stacks.

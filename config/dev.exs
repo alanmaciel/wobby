@@ -35,8 +35,8 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :wobby, Wobby.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
-  database: "wobby_dev",
+  username: System.get_env("WOBBY_DEV_USERNAME"),
+  password: System.get_env("WOBBY_DEV_PASSWORD"),
+  database: System.get_env("WOBBY_DEV_DB"),
   hostname: "localhost",
   pool_size: 10

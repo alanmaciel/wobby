@@ -10,7 +10,7 @@ defmodule Wobby do
       # Start the endpoint when the application starts
       supervisor(Wobby.Endpoint, []),
       # Start the Ecto repository
-      supervisor(Wobby.Repo, []),
+      # supervisor(Wobby.Repo, []),
       # Here you could define other workers and supervisors as children
       # worker(Wobby.Worker, [arg1, arg2, arg3]),
     ]
